@@ -39,7 +39,7 @@ pub fn (r Regex) match_str(str string, pos, options int) ?MatchData {
 	}
 
 	ovector_size := (r.captures + 1) * 3
-	ovector := [0; ovector_size]
+	ovector := [0].repeat(ovector_size)
 
 	ret := C.pcre_exec(r.re, r.extra, str.str, str.len, pos, options, ovector.data, ovector_size)
 
@@ -78,7 +78,7 @@ pub fn new_regex(source string, options int) ?Regex {
 		return error('Failed to study regex	')
 	}
 
-	C.pcre_fullinfo(re, 0, PCRE_INFO_CAPTURECOUNT, &captures)
+	C.pcre_fullinfo(re, 0, C.PCRE_INFO_CAPTURECOUNT, &captures)
 
 	return Regex{re, extra, captures}
 }
