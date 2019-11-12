@@ -3,12 +3,14 @@
 A simple regex library for [VLang](https://github.com/vlang/v).
 It use bindings from the [PCRE](https://www.pcre.org/) library.
 
+(NB: you can install this module using `v install spytheman.regex`, and then use it with `import spytheman.regex`)
+
 ## Example
 
 ```go
 # examples/match_after.v
 
-import regex
+import spytheman.regex
 
 fn main() {
   r := regex.new_regex('Match everything after this: (.+)', 0) or {
