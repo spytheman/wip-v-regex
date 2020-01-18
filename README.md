@@ -44,8 +44,8 @@ fn main() {
 ```
 
 ```bash
-> v -o example examples/match_after.v
-> ./example
+$ v -o example examples/match_after.v
+$ ./example
 Match everything after this: "I <3 VLang!"
 "I <3 VLang!"
 ```
