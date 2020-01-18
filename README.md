@@ -65,4 +65,5 @@ Some examples are available in the [examples](examples/) directory.
 
 ## Contributors
 
-* [Shellbear](https://github.com/shellbear) - creator and maintainer
+* [Shellbear](https://github.com/shellbear) - creator
+* [Spytheman](https://github.com/spytheman) - maintainer
