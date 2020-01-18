@@ -3,12 +3,16 @@
 A simple regex library for [VLang](https://github.com/vlang/v).
 It use bindings from the [PCRE](https://www.pcre.org/) library.
 
+
 ## Installation
+
 You can install this module using `v install spytheman.regex`, and
 then use it with `import spytheman.regex` .
 
 When there are updates, you can update with `v update spytheman.regex` .
+
 You can also just run `v install spytheman.regex` again.
+
 
 ## Example
 
