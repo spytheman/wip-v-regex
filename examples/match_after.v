@@ -5,7 +5,7 @@
 	* https://github.com/shellbear/v-regex
 */
 
-import regex
+import spytheman.regex
 
 fn main() {
 	r := regex.new_regex('Match everything after this: (.+)', 0) or {
