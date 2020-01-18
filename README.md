@@ -7,7 +7,7 @@ It use bindings from the [PCRE](https://www.pcre.org/) library.
 
 ## Example
 
-```go
+```v
 # examples/match_after.v
 
 import spytheman.regex
