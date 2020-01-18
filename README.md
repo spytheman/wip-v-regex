@@ -1,7 +1,16 @@
 # v-regex
 
 A simple regex library for [VLang](https://github.com/vlang/v).
-It use bindings from the [PCRE](https://www.pcre.org/) library.
+It wraps the venerable [PCRE](https://www.pcre.org/) library, so 
+you will need it installed as well.
+
+## Prerequisites:
+
+You can install libpcre using your favourite package manager:
+
+Debian: apt-get install libpcre3-dev
+
+Fedora: yum install pcre-devel
 
 
 ## Installation
