@@ -61,8 +61,8 @@ pub fn (r Regex) match_str(str string, pos, options int) ?MatchData {
 	* options: the options as mentioned in the PCRE documentation
 */
 pub fn new_regex(source string, options int) ?Regex {
-	err := string{}
-	studyerr := string{}
+	err := ''
+	studyerr := ''
 	erroffset := 0
 	captures := 0
 
@@ -75,7 +75,7 @@ pub fn new_regex(source string, options int) ?Regex {
 	extra := C.pcre_study(re, 0, &studyerr)
 
 	if studyerr.len != 0 {
-		return error('Failed to study regex	')
+		return error('Failed to study regex')
 	}
 
 	C.pcre_fullinfo(re, 0, C.PCRE_INFO_CAPTURECOUNT, &captures)
