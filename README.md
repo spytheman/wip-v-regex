@@ -24,10 +24,8 @@ You can also just run `v install spytheman.regex` again.
 
 
 ## Example
-
+(this can also be found in examples/match_after.v)
 ```v
-# examples/match_after.v
-
 import spytheman.regex
 
 fn main() {
