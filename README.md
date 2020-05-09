@@ -24,7 +24,7 @@ You can also just run `v install spytheman.regex` again.
 
 
 ## Example
-(this can also be found in examples/match_after.v)
+(this can also be found in [examples/match_after.v](https://github.com/spytheman/v-regex/blob/master/examples/match_after.v))
 ```v
 import spytheman.regex
 
