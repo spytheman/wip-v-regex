@@ -10,7 +10,7 @@ module regex
 struct MatchData {
 pub:
 	// A pointer to pcre structure
-	re *C.pcre
+	re &C.pcre
 
 	ovector []int
 	str string
@@ -37,7 +37,7 @@ pub fn (m MatchData) get(oindex int) ?string {
 		return error('Index out of bounds')
 	}
 
-	if (index < 0) {
+	if index < 0 {
 		index += m.group_size
 	}
 
@@ -55,7 +55,7 @@ pub fn (m MatchData) get(oindex int) ?string {
 /* Returns all matched groups
 */
 pub fn (m MatchData) get_all() []string {
-	mut res := []string
+	mut res := []string{}
 
 	for i := 1;; i++ {
 		substr := m.get(i) or {

@@ -10,10 +10,10 @@ module regex
 struct Regex {
 pub:
 	// A pointer to pcre structure
-	re *C.pcre
+	re &C.pcre
 
 	// A pointer to pcre_extra structure
-	extra *C.pcre_extra
+	extra &C.pcre_extra
 
 	// The number of capture groups
 	captures int
