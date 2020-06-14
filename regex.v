@@ -28,6 +28,8 @@ pub fn (r Regex) free() {
 	}
 }
 
+
+
 /* Returns a MatchData structure containing matched strings and informations
 	* str: the string to test
 	* pos: the position of the beginning of the string (default: 0)
@@ -82,3 +84,6 @@ pub fn new_regex(source string, options int) ?Regex {
 
 	return Regex{re, extra, captures}
 }
+
+#flag freebsd -I/usr/local/include
+#flag freebsd -Wl,-L,/usr/local/lib,-lpcre
