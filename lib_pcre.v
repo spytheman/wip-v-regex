@@ -12,6 +12,9 @@ module regex
 
 #flag linux  -lpcre
 #flag darwin -lpcre
+#flag windows -lpcre
+#flag freebsd -I/usr/local/include
+#flag freebsd -Wl,-L,/usr/local/lib,-lpcre
 
 #include <pcre.h>
 
