@@ -33,7 +33,7 @@ pub fn (r Regex) free() {
 	* pos: the position of the beginning of the string (default: 0)
 	* options: the options as mentioned in the PCRE documentation
 */
-pub fn (r Regex) match_str(str string, pos, options int) ?MatchData {
+pub fn (r Regex) match_str(str string, pos int, options int) ?MatchData {
 	if pos < 0 || pos >= str.len {
 		return error('Invalid position')
 	}

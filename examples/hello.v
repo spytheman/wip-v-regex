@@ -5,7 +5,7 @@
 	* https://github.com/shellbear/v-regex
 */
 
-import spytheman.regex as regex
+import spytheman.regex
 
 fn main() {
 	r := regex.new_regex('Hello', 0) or {
