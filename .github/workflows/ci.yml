@@ -12,10 +12,10 @@ jobs:
         repository: vlang/v
         path: v
 
-    - name: Checkout pcre
+    - name: Checkout the module
       uses: actions/checkout@v2
       with:
-        path: pcre
+        path: ~/.vmodules/spytheman/regex/
 
     - name: Install libpcre3-dev package
       run: sudo apt-get install --quiet -y libpcre3-dev
@@ -26,17 +26,14 @@ jobs:
     - name: V doctor
       run: v doctor
 
-    - name: Symlink pcre to ~/.vmodules
-      run: ln -s $(pwd)/pcre ~/.vmodules/pcre
-
     - name: Ensure everything is formatted
-      run: v fmt -verify pcre/
+      run: v fmt -verify ~/.vmodules/spytheman/regex/
 
     - name: Run tests
-      run: v test pcre/
+      run: v test ~/.vmodules/spytheman/regex/
 
     - name: Build example with -cstrict
-      run: v -cstrict pcre/examples/hello.v
+      run: v -cstrict ~/.vmodules/spytheman/regex/examples/hello.v
 
     - name: Build example with -cstrict -prod
-      run: v -cc gcc -cstrict -prod pcre/examples/hello.v
+      run: v -cc gcc -cstrict -prod ~/.vmodules/spytheman/regex/examples/hello.v
