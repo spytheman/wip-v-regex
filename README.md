@@ -1,4 +1,4 @@
-# Obsoleted by https://github.com/vlang/regex
+# Obsoleted by https://github.com/vlang/pcre
 
 2021/10/18 - Please use the official `pcre` module, by `v install pcre`, then
 updating your code to do `import pcre` instead of `import spytheman.regex` .
