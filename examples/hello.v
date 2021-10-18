@@ -1,10 +1,9 @@
 /*
-	* V bindings for lpcre library
+* V bindings for lpcre library
 	* http://www.pcre.org/
 	* examples/hello.v
 	* https://github.com/shellbear/v-regex
 */
-
 import spytheman.regex
 
 fn main() {

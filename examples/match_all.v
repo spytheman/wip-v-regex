@@ -1,10 +1,9 @@
 /*
-	* V bindings for lpcre library
+* V bindings for lpcre library
 	* http://www.pcre.org/
 	* examples/match_all.v
 	* https://github.com/shellbear/v-regex
 */
-
 import spytheman.regex
 
 fn main() {
@@ -17,7 +16,7 @@ fn main() {
 		'This should match... hello',
 		'This could match... hello!',
 		'More than one hello.. hello',
-		'No chance of a match...'
+		'No chance of a match...',
 	]
 
 	for test in tests {
