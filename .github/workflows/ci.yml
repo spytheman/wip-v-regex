@@ -23,6 +23,9 @@ jobs:
     - name: Build V
       run: cd v && make && sudo ./v symlink && cd -
 
+    - name: Diagnose ~/.vmodules
+      run: ls -lart ~/.vmodules/spytheman/regex
+
     - name: V doctor
       run: v doctor
 
