@@ -15,16 +15,16 @@ jobs:
     - name: Checkout the module
       uses: actions/checkout@v2
       with:
-        path: ~/.vmodules/spytheman/regex/
+        path: regex
+
+    - name: Link module to ~/.vmodules
+      run: mkdir -p ~/.vmodules/spytheman && ln -s $(realpath regex) ~/.vmodules/spytheman/regex
 
     - name: Install libpcre3-dev package
       run: sudo apt-get install --quiet -y libpcre3-dev
 
     - name: Build V
       run: cd v && make && sudo ./v symlink && cd -
-
-    - name: Diagnose ~/.vmodules
-      run: ls -lart ~/.vmodules/spytheman/regex
 
     - name: V doctor
       run: v doctor
