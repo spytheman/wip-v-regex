@@ -1,3 +1,10 @@
+# Obsoleted by https://github.com/vlang/regex
+
+2021/10/18 - Please use the official `pcre` module, by `v install pcre`, then
+updating your code to do `import pcre` instead of `import spytheman.regex` .
+
+The API is the same, but the official one is supported, unlike this module.
+
 # v-regex
 
 A simple regex library for [VLang](https://github.com/vlang/v).
